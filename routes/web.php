@@ -14,6 +14,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return redirect()->route('mail');
     })->name('dashboard');
+
+    Route::get('/profile', function () {
+        return view('profile');
+    })->name('profile');
 });
 
 require __DIR__.'/auth.php';
